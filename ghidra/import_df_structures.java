@@ -1639,6 +1639,8 @@ public class import_df_structures extends GhidraScript {
 				return new ArrayDataType(Undefined1DataType.dataType, f.size, 1);
 			case "static-string":
 				return StringDataType.dataType;
+			case "static-wstring":
+				return UnicodeDataType.dataType;
 			}
 			break;
 		}
