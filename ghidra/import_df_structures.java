@@ -1498,13 +1498,13 @@ public class import_df_structures extends GhidraScript {
 		if (size != 0) {
 			name += "(" + (size * 8) + "-bit)";
 		}
-		if (createdTypes.contains(t.getName()) ) {
-			var existing = dtcEnums.getDataType(t.getName());
+		if (createdTypes.contains(name) ) {
+			var existing = dtcEnums.getDataType(name);
 			if (existing != null)
 				return existing;
 		}
 
-		createdTypes.add(t.getName());
+		createdTypes.add(name);
 
 		if (size == 0) {
 			if (t.baseType == null || t.baseType.isEmpty()) {
