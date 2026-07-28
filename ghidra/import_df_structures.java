@@ -2385,8 +2385,8 @@ public class import_df_structures extends GhidraScript {
 					&& ns.getParentNamespace().getSymbol().getSymbolType() == SymbolType.LIBRARY) {
 				println(ns.getName());
 			}
-			sym.setNamespace(ns);
 			try {
+				sym.setNamespace(ns);
 				if (sym.getName().equals("basic_string")) {
 					sym.setName("string", SourceType.IMPORTED);
 				} else if (sym.getName().equals("~basic_string")) {
